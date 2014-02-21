@@ -1,0 +1,252 @@
+<?php
+
+function aem_classes_webform_select_options_info() {
+  $items = array();
+  $items['1_5_options'] = array(
+    'title' => t('Self Rank 1 to 5'),
+    'options callback' => 'aem_classes_list_option_1_5_options'
+  );
+  
+  $items['lo_hi_options'] = array(
+    'title' => t('Self Rank lo to hi'),
+    'options callback' => 'aem_classes_list_option_lo_hi_options'
+  );
+  
+  $items['poor_excellent'] = array(
+    'title' => t('Self Rank poor to excellent'),
+    'options callback' => 'aem_classes_list_option_poor_excellent'
+  );
+  
+  $items['instruments'] = array(
+    'title' => t('Instruments'),
+    'options callback' => 'aem_classes_list_option_instruments'
+  );
+  
+  $items['aemf1_1'] = array(
+    'title' => t('AEMF 1.1 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(1,1)
+  );
+  $items['aemf2_1'] = array(
+    'title' => t('AEMF 2.1 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(1,2)
+  );
+  $items['aemf3_1'] = array(
+    'title' => t('AEMF 3.1 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(1,3)
+  );
+  $items['aemf4_1'] = array(
+    'title' => t('AEMF 4.1 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(1,4)
+  );
+  $items['aemf1_2'] = array(
+    'title' => t('AEMF 1.2 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(2,1)
+  );
+  $items['aemf2_2'] = array(
+    'title' => t('AEMF 2.2 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(2,2)
+  );
+  $items['aemf3_2'] = array(
+    'title' => t('AEMF 3.2 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(2,3)
+  );
+  $items['aemf4_2'] = array(
+    'title' => t('AEMF 4.2 Classes'),
+    'options callback' => 'aem_classes_list_option_aemf',
+    'options arguments' => array(2,4)
+  );
+  $items['fall1_1'] = array(
+    'title' => t('Fall 1.1 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(1,1)
+  );
+  $items['fall1_2'] = array(
+    'title' => t('Fall 1.2 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(1,2)
+  );
+  $items['fall1_3'] = array(
+    'title' => t('Fall 1.3 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(1,3)
+  );
+  $items['fall1_4'] = array(
+    'title' => t('Fall 1.4 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(1,4)
+  );
+  $items['fall2_1'] = array(
+    'title' => t('Fall 2.1 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(2,1)
+  );
+  $items['fall2_2'] = array(
+    'title' => t('Fall 2.2 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(2,2)
+  );
+  $items['fall2_3'] = array(
+    'title' => t('Fall 2.3 Classes'),
+    'options callback' => 'aem_classes_list_option_fall',
+    'options arguments' => array(2,3)
+  );
+  $items['spr1'] = array(
+    'title' => t('Spring 1 Classes'),
+    'options callback' => 'aem_classes_list_option_spr',
+    'options arguments' => 1
+  );
+  $items['spr2'] = array(
+    'title' => t('Spring 2 Classes'),
+    'options callback' => 'aem_classes_list_option_spr',
+    'options arguments' => 2
+  );
+  $items['spr3'] = array(
+    'title' => t('Spring 3 Classes'),
+    'options callback' => 'aem_classes_list_option_spr',
+    'options arguments' => 3
+  );
+  $items['spr4'] = array(
+    'title' => t('Spring 4 Classes'),
+    'options callback' => 'aem_classes_list_option_spr',
+    'options arguments' => 4
+  );
+  $items['www1'] = array(
+    'title' => t('Winter 1 Classes'),
+    'options callback' => 'aem_classes_list_option_www',
+    'options arguments' => 1
+  );
+  $items['www2'] = array(
+    'title' => t('Winter 2 Classes'),
+    'options callback' => 'aem_classes_list_option_www',
+    'options arguments' => 2
+  );
+  $items['www3'] = array(
+    'title' => t('Winter 3 Classes'),
+    'options callback' => 'aem_classes_list_option_www',
+    'options arguments' => 3
+  );
+  $items['www4'] = array(
+    'title' => t('Winter 4 Classes'),
+    'options callback' => 'aem_classes_list_option_www',
+    'options arguments' => 4
+  );
+  
+  return $items;
+}
+
+/**
+* Build an options list for use by webforms.
+*/
+function aem_classes_list_option_1_5_options() {
+  $options = array(
+    '1' => t('1 (best)'),
+    '2' => t('2'),
+    '3' => t('3'),
+    '4' => t('4'),
+    '5' => t('5')
+    );
+  return $options;
+}
+
+function aem_classes_list_option_lo_hi_options() {
+  $options = array (
+    '5' => t('Low-Intermediate'),
+    '4' => t('Intermediate'),
+    '3' => t('High-Intermediate'),
+    '2' => t('Advanced'),
+    '1' => t('Very Advanced')
+    );
+  return $options;
+}
+
+function aem_classes_list_option_poor_excellent() {
+  $options = array (
+    '4' => t('Poor'),
+    '3' => t('Fair'),
+    '2' => t('Good'),
+    '1' => t('Excellent')
+  );
+  return $options;
+}
+
+function aem_classes_list_option_instruments() {
+  $options = array();
+  $connection = mysql_connect('localhost','USERNAME','PASSWORD');
+  $database = mysql_selectdb ('DATABASE', $connection);
+  $classes = mysql_query("Select id, label from instruments", $connection) or die("what?");
+  if (mysql_num_rows($classes)>0) {
+      while ($row = mysql_fetch_array($classes)) {
+	$options[$row['id']] = t($row['label']);
+      }
+  }
+  return $options; 
+  }
+  
+function aem_classes_list_option_aemf($component, $flat, $filter, $arguments) {
+  $options = array();
+  $week = $arguments[0];
+  $period = $arguments[1];
+  $connection = mysql_connect('localhost','USERNAME','PASSWORD');
+  $database = mysql_selectdb ('DATABASE', $connection);
+  $category = array("General Interest","Recorder","Bowed Strings","Reeds and Brass","Flute","Voice","Harpsichord","Notation","Dance","Lute","Percussion");
+  //Check each category for classes in this particular period
+  foreach($category as &$instrument) {
+    //BINARY makes query case sensitive - helps to distinguish Lute from Flute
+    $classes = mysql_query("Select id, name from aemclasses WHERE period='$period' AND week='$week' AND BINARY category like '%$instrument%' ORDER by id", $connection) or die("what?");
+    //if no classes in this category, don't add it to options list
+    if (mysql_num_rows($classes)>0) {
+      while ($row = mysql_fetch_array($classes)) {
+	$options[$instrument][$row['id']] = t($row['name']);
+      }
+    }
+  }
+  return $options;
+}
+  
+function aem_classes_list_option_fall($component, $flat, $filter, $arguments) {
+  $options = array();
+  $connection = mysql_connect('localhost','USERNAME','PASSWORD');
+  $database = mysql_selectdb ('DATABASE', $connection);
+  $classes = mysql_query("Select id, name from fallclasses WHERE period='$arguments[1]' AND day='$arguments[0]' order by id", $connection) or die("what?");
+  if (mysql_num_rows($classes)>0) {
+      while ($row = mysql_fetch_array($classes)) {
+	$options[$row['id']] = t($row['name']);
+      }
+  }
+  return $options;
+}
+
+function aem_classes_list_option_spr($component, $flat, $filter, $arguments) {
+  $options = array();
+  $connection = mysql_connect('localhost','USERNAME','PASSWORD');
+  $database = mysql_selectdb ('DATABASE', $connection);
+  $classes = mysql_query("Select id, name from mdwclasses WHERE period='$arguments' order by id", $connection) or die("what?");
+  if (mysql_num_rows($classes)>0) {
+      while ($row = mysql_fetch_array($classes)) {
+	$options[$row['id']] = t($row['name']);
+      }
+  }
+  return $options;
+}
+
+function aem_classes_list_option_www($component, $flat, $filter, $arguments) {
+  $options = array();
+  $connection = mysql_connect('localhost','USERNAME','PASSWORD');
+  $database = mysql_selectdb ('DATABASE', $connection);
+  $classes = mysql_query("Select id, name from wwwclasses WHERE period='$arguments' order by id", $connection) or die("what?");
+  if (mysql_num_rows($classes)>0) {
+      while ($row = mysql_fetch_array($classes)) {
+	$options[$row['id']] = t($row['name']);
+      }
+  }
+  return $options;
+}
+
+?>

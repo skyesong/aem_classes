@@ -1,0 +1,8 @@
+name = Amherst Early Music Class Lists
+description = "Generates Select Lists for Class Selections"
+dependencies[] = webform
+
+package = Webform
+core = 7.x
+version = 7.x-0.1
+
